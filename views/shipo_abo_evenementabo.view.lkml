@@ -48,8 +48,18 @@ view: shipo_abo_evenementabo {
   }
 
   dimension: abo_evt_jour {
-    type: number
+    type: string
     sql: ${TABLE}.ABO_EVT_JOUR ;;
+  }
+
+  dimension: date {
+    type: date
+    sql: CONCAT(SUBSTRING(CAST(shipo_abo_evenementabo.ABO_EVT_JOUR AS STRING),1,4),"-",SUBSTRING(CAST(shipo_abo_evenementabo.ABO_EVT_JOUR AS STRING),5,2),"-",SUBSTRING(CAST(shipo_abo_evenementabo.ABO_EVT_JOUR AS STRING),7,2)) ;;
+  }
+
+  dimension_group: date_jour {
+    type: time
+    sql: ${date}  ;;
   }
 
   dimension: abo_evt_motif {
@@ -60,6 +70,11 @@ view: shipo_abo_evenementabo {
   dimension: abo_evt_nb_abonnement {
     type: number
     sql: ${TABLE}.ABO_EVT_NB_ABONNEMENT ;;
+  }
+
+  measure: sum_abo_evt_nb_abonnement {
+    type: sum
+    sql: ${abo_evt_nb_abonnement} ;;
   }
 
   dimension: abo_evt_nb_contrat {

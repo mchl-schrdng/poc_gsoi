@@ -3,8 +3,8 @@ view: shipo_abonnes_agg {
     ;;
 
   dimension: abo_agg_debutabo {
-    type: number
-    sql: ${TABLE}.ABO_AGG_DEBUTABO ;;
+    type: date
+    sql: CAST(${TABLE}.ABO_AGG_DEBUTABO AS DATE) ;;
   }
 
   dimension_group: date {
