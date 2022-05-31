@@ -18,20 +18,10 @@ explore: shipo_abonnes_agg {
     sql_on: ${shipo_abonnes_agg.abo_agg_numabo} = ${shipo_abonnes.abo_codeclient} ;;
     relationship: many_to_one
   }
-}
 
-view: test_poc {
-  derived_table: {
-    explore_source: shipo_abonnes_agg {
-      column: abo_adr_departement { field: shipo_abonnes.abo_adr_departement }
-      column: count {}
-    }
+  join: gps_communes {
+    type: left_outer
+    sql: ${shipo_abonnes.abo_adr_insee} = ${gps_communes.insee} ;;
+    relationship: many_to_one
   }
-  dimension: abo_adr_departement {
-    description: ""
-  }
-  dimension: count {
-    description: ""
-    type: number
-  }
-    }
+}
