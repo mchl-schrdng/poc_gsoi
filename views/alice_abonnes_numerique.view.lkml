@@ -3,7 +3,7 @@ view: alice_abonnes_numerique {
     ;;
 
   dimension: anciennete {
-    description: "ceci est une description blablabla"
+    description: "ceci est une description blablablablabla"
     type: number
     sql: ${TABLE}.ANCIENNETE ;;
   }
