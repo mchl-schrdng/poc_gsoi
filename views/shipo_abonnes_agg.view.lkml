@@ -7,6 +7,13 @@ view: shipo_abonnes_agg {
     sql: ${TABLE}.ABO_AGG_DEBUTABO ;;
   }
 
+  dimension_group: date {
+    type: duration
+    timeframes: [time, date, week, month, raw]
+    sql_start:  ;;
+    sql_end: SELECT CURRENT_DATE() ;;
+  }
+
   dimension: abo_agg_debutctr {
     type: number
     sql: ${TABLE}.ABO_AGG_DEBUTCTR ;;
