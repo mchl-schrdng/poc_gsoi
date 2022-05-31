@@ -21,7 +21,9 @@ explore: shipo_abonnes_agg {
 
   join: gps_communes {
     type: left_outer
-    sql: ${shipo_abonnes.abo_adr_insee} = ${gps_communes.insee} ;;
+    sql_on: ${shipo_abonnes.abo_adr_insee} = ${gps_communes.insee} ;;
     relationship: many_to_one
   }
 }
+
+explore: shipo_abo_evenementabo {}

@@ -9,7 +9,7 @@ view: gps_communes {
 
   dimension: insee {
     type: number
-    sql: ${TABLE}.INSEE ;;
+    sql: SAFE_CAST(${TABLE}.INSEE AS STRING) ;;
   }
 
   dimension: lat {
@@ -30,6 +30,12 @@ view: gps_communes {
   dimension: nomcom {
     type: string
     sql: ${TABLE}.NOMCOM ;;
+  }
+
+  dimension: location {
+    type: location
+    sql_latitude: ${lat} ;;
+    sql_longitude: ${long} ;;
   }
 
   measure: count {

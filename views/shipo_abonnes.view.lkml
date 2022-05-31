@@ -24,7 +24,7 @@ view: shipo_abonnes {
 
   dimension: abo_adr_insee {
     type: string
-    sql: ${TABLE}.ABO_ADR_INSEE ;;
+    sql: SAFE_CAST(${TABLE}.ABO_ADR_INSEE AS STRING) ;;
   }
 
   dimension: abo_adr_mail {
