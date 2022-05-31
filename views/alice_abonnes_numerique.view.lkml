@@ -18,6 +18,11 @@ view: alice_abonnes_numerique {
     sql: ${TABLE}.ANNEE_DER_DATE_SERVIS ;;
   }
 
+  measure: test {
+    type: sum
+    sql: ${anciennete} ;;
+  }
+
   dimension: code_etat {
     type: string
     sql: ${TABLE}.CODE_ETAT ;;
