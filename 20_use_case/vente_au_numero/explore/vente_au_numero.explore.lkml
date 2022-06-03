@@ -12,7 +12,7 @@ explore: shipo_vente_au_numero {
   label: "explore pour le poc gsoi"
   description: "Exploration des ventes au numéro"
 
-  persist_with: 24_hour
+  persist_with: 24_hours
 
   join: epicbassindevie {
     view_label: "🎛 bassin de vie"
