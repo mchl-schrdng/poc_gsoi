@@ -12,7 +12,7 @@ explore: shipo_vente_au_numero {
   label: "explore pour le poc gsoi"
   description: "Exploration des ventes au numéro"
 
-  persist_with: 1_hour
+  persist_with: 24_hour
 
   join: epicbassindevie {
     view_label: "🎛 bassin de vie"
@@ -27,6 +27,15 @@ explore: shipo_vente_au_numero {
     sql_on: ${shipo_vente_au_numero.cle_commun_insee_fmt} = ${gps_communes.insee_fmt} ;;
     relationship: many_to_one
   }
+
+
+  query: test_req {
+    description: "ceci est une req de démo"
+    dimensions: [date_year]
+    measures: [sum_qteabos]
+    filters: [shipo_vente_au_numero.date_year: "2 years"]
+  }
+
 
 ### DATA TESTS
 
