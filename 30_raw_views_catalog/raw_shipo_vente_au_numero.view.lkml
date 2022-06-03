@@ -188,6 +188,7 @@ view: raw_shipo_vente_au_numero {
   }
 
   dimension_group: stats_sel_dateparu_fmt {
+    hidden: yes
     type: time
     timeframes: []
     convert_tz: no
