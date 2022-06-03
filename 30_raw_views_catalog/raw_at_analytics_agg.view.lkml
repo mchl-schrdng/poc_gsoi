@@ -1,4 +1,4 @@
-view: at_analytics_agg {
+view: raw_at_analytics_agg {
   sql_table_name: `gsoi-sandbox.gso_datalake.at_analytics_agg`
     ;;
 
@@ -50,5 +50,10 @@ view: at_analytics_agg {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: sum_m_visits {
+    type: sum
+    sql: ${m_visits} ;;
   }
 }

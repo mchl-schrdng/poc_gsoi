@@ -1,4 +1,4 @@
-view: at_analytics {
+view: raw_at_analytics {
   sql_table_name: `gsoi-sandbox.gso_datalake.at_analytics`
     ;;
 
