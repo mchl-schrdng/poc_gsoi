@@ -35,9 +35,16 @@ explore: shipo_vente_au_numero {
     measures: [sum_qteabos]
     filters: [shipo_vente_au_numero.date_year: "2 years"]
   }
-
+}
 
 ### DATA TESTS
 
-
+test: test_1_shipo_vente_au_numero {
+  explore_source: shipo_vente_au_numero {
+    column: cle_produit {}
+    filters: [shipo_vente_au_numero.date_date: "6 months"]
+  }
+  assert: test_cle_produit_not_null {
+    expression: NOT is_null(${shipo_vente_au_numero.cle_produit}) ;;
+  }
 }
