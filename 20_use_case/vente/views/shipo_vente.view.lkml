@@ -33,4 +33,15 @@ view: shipo_vente {
     sql: ${stats_qtefourni} - CAST(${stats_qtemanq} AS INT) + ${stats_qtereas} - ${stats_qteinven};;
   }
 
+  measure: sum_portage {
+    description: "somme portage"
+    type: sum
+    sql:  ${stats_qteabos_insee} - ${stats_qteabos_insee_gratuit} - ${stats_qteabos_incident};;
+  }
+
+  measure: sum_post {
+    description: "somme post"
+    type: sum
+    sql:  ${stats_qteabos_poste_payant};;
+  }
 }
