@@ -50,7 +50,7 @@ view: shipo_vente {
   measure: sum_poste {
     description: "somme poste"
     type: sum
-    sql:  ${stats_qteabos_poste_payant};;
+    sql:  ${stats_qteabos_poste_payant}/2;;
   }
 
   measure: m_stat_qteabo {
