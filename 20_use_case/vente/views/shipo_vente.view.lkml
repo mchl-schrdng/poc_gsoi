@@ -57,5 +57,6 @@ view: shipo_vente {
     description: "quantite abo"
     type: sum
     sql:  ${stats_qteabos};;
+    filters: [cle_commun_insee: ""]
   }
 }
