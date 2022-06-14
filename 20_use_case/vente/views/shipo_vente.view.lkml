@@ -30,7 +30,7 @@ view: shipo_vente {
   measure: sum_ventes {
     description: "somme des ventes"
     type: sum
-    sql: ${stats_qtefourni} - ${stats_qtemanq} + ${stats_qtereas} - ${stats_qteinven};;
+    sql: ${stats_qtefourni} - ${stats_qtemanq} +  CAST(${stats_qtereas} AS INT) - ${stats_qteinven};;
   }
 
 }
