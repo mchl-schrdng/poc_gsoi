@@ -1,5 +1,5 @@
 include: "/10_model/poc_gsoi.model.lkml"
-include: "/20_use_case/abonnes/views/*.view.lkml"
+include: "/20_use_case/abonnes/views/shipo_abonnes.view.lkml"
 ### VIEWS
 
 ### EXPLORE
