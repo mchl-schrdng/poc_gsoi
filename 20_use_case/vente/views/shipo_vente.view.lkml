@@ -44,4 +44,10 @@ view: shipo_vente {
     type: sum
     sql:  ${stats_qteabos_poste_payant};;
   }
+
+  measure: m_stat_qteabo {
+    description: "quantite abo"
+    type: number
+    sql:  ${stats_qteabos};;
+  }
 }
