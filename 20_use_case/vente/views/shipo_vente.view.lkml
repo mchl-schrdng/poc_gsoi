@@ -47,7 +47,7 @@ view: shipo_vente {
 
   measure: m_stat_qteabo {
     description: "quantite abo"
-    type: number
+    type: sum
     sql:  ${stats_qteabos};;
   }
 }
