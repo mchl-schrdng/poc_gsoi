@@ -65,7 +65,6 @@ view: shipo_vente {
     type: count_distinct
     sql:  ${cle_pdv};;
     filters: [stats_type_pdv: "S"]
-    filters: [stats_qteinven: "0"]
   }
 
   measure: count_mep_S_inv_0 {
