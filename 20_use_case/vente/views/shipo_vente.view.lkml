@@ -59,4 +59,11 @@ view: shipo_vente {
     sql:  ${stats_qteabos};;
     filters: [cle_commun_insee: ""]
   }
+
+  measure: count_mep {
+    description: "nombre de MEP S"
+    type: count_distinct
+    sql:  ${cle_pdv};;
+    filters: [stats_type_pdv: "S"]
+  }
 }
