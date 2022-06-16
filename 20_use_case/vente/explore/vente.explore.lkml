@@ -21,10 +21,10 @@ explore: shipo_vente {
     relationship: one_to_one
   }
 
-  join: shipo_referentiel_pdv_typeperso_editionlocale {
-    view_label: "Référentiel PDV LOCALE SO"
+  join: shipo_referentiel_editions_principales {
+    view_label: "Référentiel PDV édition principale"
     type: left_outer
-    sql_on: ${shipo_referentiel_pdv.cle_pdv_tpdv} = ${shipo_referentiel_pdv_typeperso_editionlocale.cle_pdv_tpdv} ;;
+    sql_on: ${shipo_vente.cle_lp} = ${shipo_referentiel_editions_principales.cle_lp} ;;
     relationship: one_to_one
   }
 }
